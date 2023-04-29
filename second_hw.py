@@ -46,9 +46,11 @@ def string_concatenation(str1, str2):
 '''
 
 
-def file_name(path1):
-    name = path1.split('/')[-1].split('.')
-    return name[0]
+def file_name(path):
+    name_file = path.split('\\')[-1].split('.')
+    disk_name = path.split(':')[0]
+    root_dir = path.split('\\')[1]
+    return f'Это название файла: {name_file[0]}, это диск: {disk_name}, это корневая папка: {root_dir}'
 
 
 '''
@@ -91,7 +93,7 @@ def find_string(str1, str2):
 print(square(2))
 print(root(2, 10, 10))
 print(string_concatenation('Это первая строка', 'А тут вторая'))
-print(file_name('/Users/alina/PycharmProjects/tensor_automation/second_hw.py'))
+print(file_name('C:\Thecode\Media\статья.txt'))
 print(string_format(4, 5))
 print(delete_oven_symbols('тут должны отображаться только буквы с четным индексом'))
 print(find_string('and', 'qwerrtyuiioplkjhgfdsazxcvbnm,'))
