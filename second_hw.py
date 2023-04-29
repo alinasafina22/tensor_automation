@@ -8,7 +8,7 @@ import math
 def square(side):
     perimetr = 4 * side
     area = side ** 2
-    diagonal = (2 * (side ** 2)) / 2
+    diagonal = round(side * math.sqrt(2), 2)
     return perimetr, area, diagonal
 
 
@@ -70,9 +70,9 @@ def string_format(a, b):
 
 def delete_oven_symbols(str3):
     result = ''
-    for i in range(len(str3)):
-        if i % 2 == 0:
-            result = result + str3[i]
+    for i in str3:
+        if str3.index(i) % 2 == 0:
+            result = result + i
     return result
 
 
@@ -91,9 +91,9 @@ def find_string(str1, str2):
 
 
 print(square(2))
-print(root(2, 10, 10))
+print(root(5, 3, -26))
 print(string_concatenation('Это первая строка', 'А тут вторая'))
 print(file_name('C:\Thecode\Media\статья.txt'))
 print(string_format(4, 5))
-print(delete_oven_symbols('тут должны отображаться только буквы с четным индексом'))
+print(delete_oven_symbols('01234567890'))
 print(find_string('and', 'qwerrtyuiioplkjhgfdsazxcvbnm,'))
