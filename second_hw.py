@@ -68,7 +68,7 @@ def string_format(a, b):
 '''
 
 
-def delete_oven_symbols(str3):
+def delete_odd_symbols(str3):
     result = ''
     for i in str3:
         if str3.index(i) % 2 == 0:
@@ -95,5 +95,5 @@ print(root(5, 3, -26))
 print(string_concatenation('Это первая строка', 'А тут вторая'))
 print(file_name('C:\Thecode\Media\статья.txt'))
 print(string_format(4, 5))
-print(delete_oven_symbols('01234567890'))
+print(delete_odd_symbols('01234567890'))
 print(find_string('and', 'qwerrtyuiioplkjhgfdsazxcvbnm,'))
