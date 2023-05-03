@@ -47,10 +47,11 @@ def string_concatenation(str1, str2):
 
 
 def file_name(path):
-    name_file = path.split('\\')[-1].split('.')
+    name_file = path.split('\\')[-1]
+    name = name_file[:name_file.rfind('.')]
     disk_name = path.split(':')[0]
     root_dir = path.split('\\')[1]
-    return f'Это название файла: {name_file[0]}, это диск: {disk_name}, это корневая папка: {root_dir}'
+    return f'Это название файла: {name}, это диск: {disk_name}, это корневая папка: {root_dir}'
 
 
 '''
@@ -69,11 +70,7 @@ def string_format(a, b):
 
 
 def delete_odd_symbols(str3):
-    result = ''
-    for i in str3:
-        if str3.index(i) % 2 == 0:
-            result = result + i
-    return result
+    return str3[::2]
 
 
 '''
@@ -93,7 +90,7 @@ def find_string(str1, str2):
 print(square(2))
 print(root(5, 3, -26))
 print(string_concatenation('Это первая строка', 'А тут вторая'))
-print(file_name('C:\Thecode\Media\статья.txt'))
+print(file_name('C:\Thecode\Media\ст.ат.ья.txt'))
 print(string_format(4, 5))
 print(delete_odd_symbols('01234567890'))
 print(find_string('and', 'qwerrtyuiioplkjhgfdsazxcvbnm,'))
